@@ -94,19 +94,19 @@
 
     <script>
         function boxList(){
-            const boxListConts = document.querySelectorAll(".box-list-cont");
             const boxListHead = document.querySelectorAll(".box-list-header");
+            const boxListConts = document.querySelectorAll(".box-list-cont");
+            const boxListCont = document.querySelector(".box-list-cont");
             const boxListOpen = document.querySelectorAll(".box-list-open");
             const boxListHide = document.querySelectorAll(".box-list-hide");
 
             for(let i=0; i<boxListConts.length; i++){
                 boxListHead[i].addEventListener("click", () => {
                     boxListConts[i].classList.toggle ("active");
-                    boxListOpen[i].classList.toggle("blind");
-                    boxListHide[i].classList.toggle("blind");     
+                    boxListOpen[i].classList.toggle("blind"); 
+                    boxListHide[i].classList.toggle("blind");
                 })
             }
-
         }
         boxList()
     </script>

@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
 <link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
 <link rel="stylesheet" href="assets\css\import.css">
-
 </head>
 <body>
 <!-- Wrapper -->
@@ -19,12 +18,14 @@
             <button type="button" class="btn btn-back">
                 <span class="blind">뒤로가기</span>
             </button>
+            <!-- 2023-01-16 조경애 -->
             <div class="h-title">
-                <span>공동인증서 인증</span>
+                <span>인증서 가져오기</span>
             </div>
-            <button type="button" class="btn btn-close hidden">
+            <button type="button" class="btn btn-close">
                 <span class="blind">닫기</span>
             </button>
+            <!--// 2023-01-16 조경애 -->
         </div>
         <!-- // header -->
     </header>
@@ -35,42 +36,47 @@
         <!-- content -->
         <div class="content">
             <!-- content내용 -->
-            <div class="content-body">
+            <div class="content-body">                
                 <!-- content-top -->
-                <div class="content-top line-be4">
-                    <p class="top-tit"><strong>PC</strong>에서 <strong>스마트폰</strong>으로 <br /> 공동인증서를 가져옵니다.</p>
-                    <p class="top-txt fc-gray">인증번호를 PC에 입력해주세요.</p>
-                    <p class="phone-num fw-b fc-dark">0234 - 5678 - 7297</p>
+                <!-- 2023-01-16 조경애 -->
+                <div class="content-top line-be4 pad-b30">
+                    <p class="top-tit"><strong>다른 기기</strong>의 <strong>브라우저 인증서</strong>를 <br /> 가져옵니다.</p>
+                    <p class="top-txt fc-gray mar-t30">다른 기기에 표시된 인증번호를 확인 후<br />입력해주세요</p>
+                    <div class="inp-block inp-num pad-t10">
+                        <input type="number" class="inp type01" name="certNum01" id="certNum01" value="1234" />
+                        <b class="txt-hyphen"> - </b>
+                        <input type="number" class="inp type01" name="certNum02" id="certNum02" value="5678" />
+                        <b class="txt-hyphen"> - </b>
+                        <input type="number" class="inp type01" name="certNum03" id="certNum03" value="9012" />
+                    </div> 
                 </div>
+                <!--// 2023-01-16 조경애 -->
                 <!-- //content-top -->
 
                 <!-- section -->
-                <section class="section line-tf4 line-bf4">
+                <section class="section line-tf4 pad-b0">
                     <ul class="step-list">
+                        <!-- 2023-01-16 조경애 -->
                         <li class="step-item">
                             <span class="step-tit fw-b fc-dark">Step 1.</span>
-                            <span class="step-txt fc-gray">PC에서 BOX (<a href="www.ibkbox.net" class="fc-gray">www.ibkbox.net</a>) 접속</span>
+                            <span class="step-txt fc-gray">인증센터 이동</span>
                         </li>
                         <li class="step-item">
                             <span class="step-tit fw-b fc-dark">Step 2.</span>
-                            <span class="step-txt fc-gray">공동인증센터 > PC에서 스마트기기로 인증서 복사 > [인증서 내보내기] 버튼 선택</span>
+                            <span class="step-txt fc-gray">스마트폰 인증서 복사</span>
                         </li>
                         <li class="step-item">
                             <span class="step-tit fw-b fc-dark">Step 3.</span>
-                            <span class="step-txt fc-gray">PC에서 인증서 선택 후 인증서 비밀번호 입력</span>
+                            <span class="step-txt fc-gray">브라우저 인증서 선택</span>
                         </li>
                         <li class="step-item">
                             <span class="step-tit fw-b fc-dark">Step 4.</span>
-                            <span class="step-txt fc-gray">위에 생성된 인증번호 12자리를 PC화면에 입력 </span>
+                            <span class="step-txt fc-gray">인증서 가져오기 클릭</span>
                         </li>
-                        <li class="step-item">
-                            <span class="step-tit fw-b fc-dark">Step 5.</span>
-                            <span class="step-txt fc-gray">아래 [인증서 가져오기] 버튼 선택</span>
-                        </li>
+                        <!--// 2023-01-16 조경애 -->
                     </ul>
                 </section>
                 <!-- //section -->
-            
             </div>
             <!-- //content내용 -->  
 
