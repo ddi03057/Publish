@@ -1,0 +1,25 @@
+LB1304-3M.html:  // 대출실행 - 금소법 대응
+LB1900-5M.html: // 사전심사 - 행정구역 주소지 입력 (시도 선택)
+LB1900-6M.html: // 사전심사 - 행정구역 주소지 입력 (시군구 선택)
+UI-0003-01.html: PROGRESS: '/progress' //메인 - 진행상태 (1. 사전심사 신청과 수신)
+UI-0003-02.html: PROGRESS: '/progress' //메인 - 진행상태 (2. 보증심사 신청 진행 및 취소)
+UI-0003-03.html: PROGRESS: '/progress' //메인 - 진행상태 (2. 보증심사 신청 미충족 및 완료)
+UI-0003-04.html: PROGRESS: '/progress' //메인 - 진행상태 (3. 대출 실행 완료 - footer 화면기획서와 비대칭)
+UI-0003-05.html: PROGRESS: '/progress' //메인 - 진행상태 (3. 대출 실행 완료 - footer 화면기획서와 비대칭)
+UI-0006-06.html: PREJUDGE: '/prejudge' // 공동인증서 복사 및 등록 안내
+UI-0006-07.html: PREJUDGE: '/prejudge' // 공동인증서 복사 및 등록 안내
+UI-0006-08.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 인증)
+UI-0006-09.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 인증)
+UI-0006-09-2.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 인증)
+UI-0006-10.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 인증 - 비밀번호 다시 입력 팝업)
+UI-0007-01.html: PREJUDGE : '/prejudge' // 사전심사 - 행정구역 주소지 입력
+UI-0013-01.html: GRTJUDGE_APPRINFO: '/grtjudge/apprinfo',  //보증승인내역 확인
+UI-0013-02.html: GRTJUDGE_APPRINFO: '/grtjudge/apprinfo',  //보증승인내역 확인 (유효기간 만료 팝업)
+UI-0013-03.html: GRTJUDGE_APPRINFO: '/grtjudge/apprinfo',  //보증승인내역 확인 (영업시간 만료 팝업)
+UI-0013-04.html: GRTJUDGE_APPRINFO: '/grtjudge/apprinfo',  //보증승인내역 확인 (계좌개설  팝업)
+UI-0030-00.html:  MAIN: '/main' // 상품안내
+UI-0031-00.html:  MAIN: '/main' // 나의 대출 (미보유)
+UI-0031-00-2.html:  MAIN: '/main' // 나의 대출 (보유)
+UI-0040-01.html: LOGIN: '/login', //로그인
+UI-0040-01-3.html:LONEXECUTE_STAMPTAX: '/lonexecute/stamptax' // 인지세 확인
+UI-0040-01-4.html:LONEXECUTE_STAMPTAX: '/lonexecute/stamptax' // 인지세 확인
