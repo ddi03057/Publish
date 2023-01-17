@@ -78,6 +78,10 @@
     max-width: 1400px;
 }
 
+.inner-w {
+    padding: 0 25px;
+}
+
 .w50 {
     width: 50px !important;
 }
@@ -185,6 +189,10 @@
 
 .mar-t15 {
     margin-top: 15px !important;
+}
+
+.mar-t16 {
+    margin-top: 16px !important;
 }
 
 .mar-t20 {
@@ -302,6 +310,10 @@
 
 .pad-t10 {
     padding-top: 10px !important;
+}
+
+.pad-t16 {
+    padding-top: 16px !important;
 }
 
 .pad-t20 {
@@ -536,4 +548,12 @@
 
 .va-b {
     vertical-align: bottom !important;
+}
+
+.red-16c {
+    color: #f4516c;
+}
+
+.u-line {
+    text-decoration: underline;
 }

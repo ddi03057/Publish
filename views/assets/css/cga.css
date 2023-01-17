@@ -130,6 +130,7 @@
 .loan-amount .txt-won strong {
     font-size: 40px;
     line-height: 58px;
+    word-break: break-all;
 }
 .loan-amount .txt-rate {
     font-size: 18px;
@@ -164,12 +165,12 @@
 .box-cont .b-txt dt:first-child {
     padding-top: 0;
 }
-.list-type01 li {
+.list-type01 > li {
     position: relative;
     padding-left: 13px;
     line-height: 30px;
 }
-.list-type01 li::before {
+.list-type01 > li::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -180,26 +181,26 @@
     border: 2px solid var(--primary-color);
     border-radius: 50%;
 }
-.list-type01 li + li {
+.list-type01 > li + li {
     margin-top: 10px;
 }
 
-.list-type02 li::before {
+.list-type02 > li::before {
     content: "∙ ";
 }
 
-.list-type03 li::before {
+.list-type03 > li::before {
     content: "※ ";
 }
 
-.list-type04 li {
+.list-type04 > li {
     position: relative;
     padding: 0 0 0 18px;
     font-size: 16px;
     line-height: 28px;
     color: #666;
 }
-.list-type04 li::before {
+.list-type04 > li::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -210,11 +211,11 @@
     border-radius: 50%;
     background-color: #666;
 }
-.list-type04 li + li {
+.list-type04 > li + li {
     margin-top: 10px;
 }
 
-.list-type05 li::before {
+.list-type05 > li::before {
     content: "* ";
 }
 
@@ -228,6 +229,7 @@
     line-height: 22px;
     color: #999;
     background-color: #f8f8f8;
+    border-radius: 4px;
 }
 
 .c-tit01 {
@@ -310,7 +312,7 @@
     width: 18px;
     height: 18px;
     margin-left: -8px;
-    border: 5px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     border-radius: 50%;
     background-color: var(--primary-color);
 }
@@ -325,6 +327,7 @@
 }
 .process-h li.ing::after {
     background-color: #fff;
+    border-width: 5px;
 }
 .process-h li.ing ~ li::after, .process-h li.complete ~ li::after {
     border-color: #d8d6de;
@@ -392,4 +395,26 @@
     color: #666;
     font-size: 16px;
     line-height: 26px;
+}
+
+.content-terms .section {
+    padding-top: 0;
+}
+.content-terms .section:last-child {
+    padding-bottom: 0;
+}
+
+.inp-num {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.inp-num .inp.type01 {
+    min-width: 90px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+.inp-num .txt-hyphen {
+    padding: 0 4px;
 }
