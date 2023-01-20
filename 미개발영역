@@ -12,9 +12,6 @@ UI-0006-08.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 �
 UI-0006-09.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 인증)
 UI-0006-09-2.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 인증)
 UI-0006-10.html: PREJUDGE: '/prejudge' // 스크래핑 진행(공동인증서 인증 - 비밀번호 다시 입력 팝업)
-UI-0013-02.html: GRTJUDGE_APPRINFO: '/grtjudge/apprinfo',  //보증승인내역 확인 (유효기간 만료 팝업)
-UI-0013-03.html: GRTJUDGE_APPRINFO: '/grtjudge/apprinfo',  //보증승인내역 확인 (영업시간 만료 팝업)
-UI-0013-04.html: GRTJUDGE_APPRINFO: '/grtjudge/apprinfo',  //보증승인내역 확인 (계좌개설  팝업)
 UI-0030-00.html:  MAIN: '/main' // 상품안내
 UI-0031-00.html:  MAIN: '/main' // 나의 대출 (미보유)
 UI-0031-00-2.html:  MAIN: '/main' // 나의 대출 (보유)
