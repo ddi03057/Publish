@@ -1,17 +1,17 @@
 0.사전 심사
 0.1. 정보조회 약관 동의 [화면 ID: OSL-2-002-00]
-참조화면:LB1101_1M
+참조화면:LB1101_1M  
 약관저장
-InputParameter : dcffStplId(약관)의 값을 dcffStplIdList 만듬
+InputParameter : dcffStplId(약관)의 값을 dcffStplIdList 만듬: "10012" (리스트)
 대출 상태 업데이트, 대출 기본데이터 등록, 대출기본키 세션등록(화면, session에서 LoginId = idmbId)
 InputParameter : 약관 저장 Status,RsltData(boxpChnlDcd,idmbId,ibkboxLoapNo(대출신청Key))
 Output : status, boxsessionInfo.getMmcrBsnnNo(사업자 번호)
 
 0.2. 적합성, 적정성 고객정보 확인 [화면 ID: OSL-2-003-00]
 참조화면 : LB1103-1M
-InputParameter :
+InputParameter  
 lfncAcmDcd(전문금융 소비자여부),
-age(연령),
+age(연령), 
 lfncHlasDcd(보유자산),
 lfncEnprPsntIncmDcd(현재소득),
 lfncFtrAntcAnicDcd(미래예상소득),
@@ -19,7 +19,7 @@ lfncLbltDcd(부채),
 lfncOvduDcd(연체정보),
 lfncCrdtScrCnfaYn(신용점수),
 lfncRepmWayDcd(변제방법),
-cusEad(이메일),
+cusEad(이메일), abc@gmail.com
 알고있음 선택시------
 cdbuScr(점수),
 lfncCrdtScrVainDcd(평가기관)
@@ -37,7 +37,7 @@ brthdy,email,status 리턴
 참조화면: (적합) LB1103_2M, (부적합)LB1103_3M, (대상외) LB1103_4M
 (적합,대상외)InputParameter : 전페이지에서 받은 csnNmbnYn,bizNo를 가지고 공동인증서 페이지 이동
 (부적합) ibk내에서는 부적합페이지에서 다시 data를 받음 당일에는 불가
-InputParameter:
+InputParameter: 
 lfncAcmDcd(전문금융 소비자여부),
 age(연령),
 lfncHlasDcd(보유자산),
