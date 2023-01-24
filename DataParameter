@@ -1,13 +1,81 @@
 0.사전 심사
 0.1. 정보조회 약관 동의 [화면 ID: OSL-2-002-00]
 참조화면:LB1101_1M
+약관저장
+InputParameter : dcffStplId(약관)의 값을 dcffStplIdList 만듬
+대출 상태 업데이트, 대출 기본데이터 등록, 대출기본키 세션등록(화면, session에서 LoginId = idmbId)
+InputParameter : 약관 저장 Status,RsltData(boxpChnlDcd,idmbId,ibkboxLoapNo(대출신청Key))
+Output : status, boxsessionInfo.getMmcrBsnnNo(사업자 번호)
+
 0.2. 적합성, 적정성 고객정보 확인 [화면 ID: OSL-2-003-00]
 참조화면 : LB1103-1M
+InputParameter :
+lfncAcmDcd(전문금융 소비자여부),
+age(연령),
+lfncHlasDcd(보유자산),
+lfncEnprPsntIncmDcd(현재소득),
+lfncFtrAntcAnicDcd(미래예상소득),
+lfncLbltDcd(부채),
+lfncOvduDcd(연체정보),
+lfncCrdtScrCnfaYn(신용점수),
+lfncRepmWayDcd(변제방법),
+cusEad(이메일),
+알고있음 선택시------
+cdbuScr(점수),
+lfncCrdtScrVainDcd(평가기관)
+OutPut : 각각화면에
+(적합화면) 상태값 01,gtlnPgstDcd,lgnMnbrNm,csnNmbnYn,bizNo
+(부적합) 상태값 02
+(대상외) 상태값 03 ,gtlnPgstDcd,lgnMnbrNm,csnNmbnYn,bizNo
+------적합성적정성 기초데이터 조회 ----------
+화면단에서 넘기는 데이터x
+boxsessionInfo - LgnMnbrId,LgnMnbrId 가지고plfUserInfo조회
+brthdy,email,status 리턴
+
+
 0.3. 적합성, 적정성 고객 정보 결과 [화면 ID: OSL-2-004-00]
 참조화면: (적합) LB1103_2M, (부적합)LB1103_3M, (대상외) LB1103_4M
+(적합,대상외)InputParameter : 전페이지에서 받은 csnNmbnYn,bizNo를 가지고 공동인증서 페이지 이동
+(부적합) ibk내에서는 부적합페이지에서 다시 data를 받음 당일에는 불가
+InputParameter:
+lfncAcmDcd(전문금융 소비자여부),
+age(연령),
+lfncHlasDcd(보유자산),
+lfncEnprPsntIncmDcd(현재소득),
+lfncFtrAntcAnicDcd(미래예상소득),
+lfncLbltDcd(부채),
+lfncOvduDcd(연체정보),
+lfncCrdtScrCnfaYn(신용점수),
+lfncRepmWayDcd(변제방법),
+cusEad(이메일),
+알고있음 선택시------
+cdbuScr(점수),
+lfncCrdtScrVainDcd(평가기관)
 0.4. 스크래핑 진행(공동인증서 인증) [화면 ID: OSL-2-007-00]
 참조화면 : LB1900_11M
+보증부대출 사전검증 호출
+-------/LOANSign/setHashInfo에서 lonDdcnHashVlList생성하는것같음 ------------ (session에서)
+elcrDdcnMngmNo, lonDdcnHashVlListRowcount, lonDdcnHashVlList, argrInqCosnAtshSrn, argrInqCosnAtshIcpnNm, argrAgrmAtshUserNm
+InputParameter:
+argrInqCosnAtshSrn(지역보증조회동의인증서일련번호)
+argrInqCosnAtshIcpnNm(지역보증조회동의인증서발급자명)
+argrAgrmAtshUserNm(지역보증조회동의인증서사용자명)
+elcrDdcnMngmNo(전자약정서관리번호)
+lonDdcnHashVlListRowcount(여신약정서해쉬값리스트_배열)
+lonDdcnHashVlList(여신약정서종류코드)
+lonDdcnHashVl(여신약정서해쉬값)
+lonDdcnElsgVl(여신약정서전자서명값)
+"/loan/LB1102_4M" 페이지로 이동하는데 뭔지 모르겟
+
 0.5. 보증심사자료 작성 [화면 ID: OSL-2-008-00]
-참조화면 : 확인필요
+참조화면 : LB1102_5M
+NoData
+
+
 0.6. 서류 전송 확인 [화면 ID: OSL-2-009-00]
-참조화면 : LB1004_2M
+참조화면 : LB1104_2M
+InputParam:없음 (비즈니스로직에서 사업자번호 호출하여 조회)
+OuputParam: 진행상태 결과세팅 (resultV01)
+rsltData, vals, keys(Object.keys(rsltData)),length
+key에 서류 값이 있는듯?
+
