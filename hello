@@ -5,40 +5,190 @@
 나의 대출
 화면 ID : OSL-0-002-00
 참조 화면 : LB1003_1M
+Onload function{
+InputParam :
+controller - (jo, boxSessionInfo)commLoanUtil
+OutputParam : 
+usisNm, dmLoan , dmLonAcnt, dsLonAcntList, Status
+}
+계좌조회 function?????{
+InputParam :
+controller - (jo, boxSessionInfo)commLoanUtil
+OutputParam : 
+(전문사용)
+status, lonAcnmList
+}
+
 
 진행 상태
 화면 ID : OSL-0-003-00
 참조 화면 : LB1002_1M
+inqLbr001MList function {
+ajax를 안탐...
+OutputParm : resultList - usisId,bplcNm,rprsntvNm,Status
+Page에 있는 data배열..??
+RSLT_LIST": [
+					        {
+					            "ibkboxLoapNo": "C00001080005",
+					            "usisId": "C0000108",
+					            "idmbId": "box10301",
+					            "edpsCsn": "4799474",
+					            "frstLoapAmt": "1000000",
+					            "lastLoapAmt": "1000000",
+					            "enprFnusCd": "G11",
+					            "enrpFnusNm": "원자재구입자금",
+					            "loanFromTo": "2019-04-02 ~ 2019-05-02",
+					            "loanCnt": "1개월",
+					            "lmtNm": "일반대출",
+					            "lonCnslNo": "A1900011529",
+					            "ctctTpn": "010-1234-1365",
+					            "JudgeResultCon": "시스템심사 : 적격",
+					            "lonFnncCnslMngmNo": "9222210000001233",
+					            "email": "jsoil2021@naver.com",
+					            "apinKcd": "0090",
+					            "itpmSpcfDd": "25",
+					            "attrAcntEnn": "294191102001",
+					            "mractEnn": "294191102001",
+					            "loapYmd": "20190402",
+					            "unlmPgstDcd": "0050",
+					            "gtlnPgstDcd": "1200",
+					            "psrnRucd": "1",
+					            "psrnCon": "사전점검 : 적격",
+					            "sysExntRucd": "01",
+					            "sysExntRsltCon": "정상",
+					            "boxpLonPgstDcd": "",
+					            "fndtDcd": "BSS",
+					            "argrRjrsDecd": "101",
+					            "argrLolmAmt": "30000000",
+					            "gtlnPgrsYmd": "20211012",
+					            "bplcNm": "㈜바이오",
+					            "crprsntvNm": "홍길동",
+					            "eonePgstDcd": "",
+					            "eoneSnbcRsnCon": "",
+					            "eonePgrsYmd": "20220826",
+					            "eoneElgrLoapAmt": "111111111",
+					            "eoneMngmBrm": ""
+					        }
+                ]
+}
+setBTag function {
+inqLbr001MList function에서 gtlnpgstDcd의 값으로 blockNum값을 받아 진행상태 세팅
+InputParam : gtlnPgstDcd(blockNum),i,data,ibkboxLoapNo
+
+}
+
+inqValCheck function {
+서비스 이용 가능 시간 여부 확인(채널진입 시간)(Y,N) chaEntHourYn,
+서비스 이용 가능 시간 여부 확인(보증부 대출실행시간)(Y,N) loanActionHourYn
+서비스 이용 가능 시간 여부 확인(신용 대출실행시간) (Y,N) loanCreateActionHourYn
+영업일 조회(bizDayInq) api 조회 (Y,N) hlddYn
+법인사업자여부 확인(MmcrBsnnNo)값으로 조회 (개인,법인 사업자 구분) cprSe
+전산고객번호 유무 확인 (MmcrBsnnNo)값으로 (cusBsinInq) api조회 (Y,N) edpsCsnYn
+정회원 준회원 여부 (MmcrBsnnNo)값으로 (CmpyInq) api조회 (0001:정회원, 0002:준회원) entrprsMberSe
+휴폐업 여부 조회
+
+InputParam :
+controller - (jo, boxSessionInfo)commLoanUtil
+OutputParam :
+bizrno,cusCnfaAcmpYn,vrcrBsnnYn,
+}
+
 
 3.대출 실행
 -보증 승인 내역
 화면 ID: OSL-3-001-00
 참조 화면 : LB1301_3M
+InputParam :
+
+OutputParam :
+(기은상사)krnCsm,
+(홍길동)rpprKrnSrnmNm,
+(시용보증기금 서울지점)mngmBrm,
+(30000000)loanScdlAmt,
+(20220623)grnyIssuYmd,
+(20220721)grnyExpiYmd,
+(을지로지점)brcd,
+(20220721)loanExecYmd
+}
 
 -대출 약관 동의
 화면 ID: OSL-3-002-00
 참조 화면 : LB1302_3M
+InputParam :
+약관리스트 - dcffStplIdList
+OutputParam :
+status(0000)
+}
 
 -대출 신청 정보 입력
 화면 ID : OSL-3-004-00
 참조 화면 : LB1303_4M -> LB1303_1M
+공동인증서 result값
+callGuarInfoDtlInq(result){
+InputParam :
+loanParam.atshSrnHex     = result.serial_number; // 지역보증조회동의인증서일련번호
+loanParam.atshIsncMnbdDN = result.issuer_dn;     // 지역보증조회동의인증서발급자명
+loanParam.atshIsncInttDN = result.subject_dn;    // 지역보증조회동의인증서사용자명
+OutputParam :
+(신청일자)baseYmd
+(대출만기일)argrExpiYmd
+(보증승인금액)argrGrnyAmt
+(보증료)argrGrfrAmt
+(기업명)argrCmunNm
+(대출신청금액)loanAmountTitle
+}
+//대출금 입금 및 자동이체 계좌번호 조회
+InputParam : 공동인증서 RSLT data
+OutPutParam : selAccount, CusAcn
 
+//기업자금용도,할부금 및 이자납입일, 계좌번호
+InputParam : (기업자금용도)enprFnusCd,(할부금 및 이자납입일)itpmScdlDd, (계좌번호)attrAcntEnn
+OutputParam : status
 -인지세 확인
 화면 ID : OSL-3-005-00
-참조 화면 : 없을걸
+참조 화면 : 없을걸??
 
 -대출 내용 확인
 화면 ID: OSL-3-006-00
 참조 화면 : LB1304_1M
+InputParam : session(elcrDdcnMngmNo,lonDdcnHashVlListRowcount,lonDdcnHashVlList,lonDdcnHashVlList)
+OutPutParam :
+status(0000)
+(타이틀)title
+(대출금액)loanAmt
+(금리)loanIrt
+(가산금리)loanIrtSub
+(대출신청일자)loexYmd
+(거치기간만료)dfteExpyYmd
+(대출 만료)loepYmd
+(실행정보)loexD
+(납부계좌)atagMndpAcn
+(지연배상금률)jiYun
+(중도상환해약금)jungDo
+(상환방법)sangHwan
+(총원리금 및 수수료 부담예상액)antcAmt
+(자금용도)enprFnusCd
+
 
 -금소법 대응
 화면 ID: OSL-3-007-00
 참조 화면 : LB1304_3M
+InputParam: session(ibkboxLoapNo)
+OutPutParam : status,dmResEnprDtlInq
+
 
 -ARS 인증
 화면 ID: OSl-3-008-00
 참조 화면: LB1305_1M
-
+금소법페이지에서{
+InputParam:
+twoChnlArsCrtcAthzTpn
+nwloLmtnGdncYn
+hlrpCnltGdncYn
+rskSbjcGdncYn
+}
+InputParam : twoChnlArsAcitId
+OutPutParam : status,RSLT_DATA,strPass
 -대출 실행 완료
 화면 ID: OSL-3-010-00
 참조 화면 : LB1306_1M 
