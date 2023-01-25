@@ -13,7 +13,7 @@
 2. 사전 심사 - 자료수집(공동인증서 인증) : Prejudge - X
 2. 사전 심사 - 보증심사자료 작성 : prejudge - Grtinfoinput.js
 2. 사전 심사 - 서류 전송 확인 : prejudge - DocStatus.js
-3. 대출 실행 - lonexecute - X
+3. 대출 실행 - 대출 실행 보증 승인 내역 : Grtjudge - ApprInfo.js
 3. 대출 실행 - 대출 약관 동의 : lonexecute - untactagrm.js
 3. 대출 실행 - 공동인증서 선택 및 인증 : lonexecute - X
 3. 대출 실행 - 대출 신청 정보 입력 : lonexecute - Applyinfoinput.js
