@@ -20,7 +20,7 @@
 / 할부금 및 이자 납입일 직접입력 선택 시 입력창에 숫자 키패드 띄우고 1~31까지만 입력 가능
 / Grtinfoinput 화면의 대출희망금액을 5000만원 초과한 값 입력 시 인지세 확인 화면으로 라우팅
 3. 대출 실행 - 인지세 확인 : lonexecute - StampTax.js - 다음 버튼 누를 시 대출 내용 확인 화면으로 라우팅
-3. 대출 실행 - 대출 내용 확인 : lonnexecute - Loncontentcheck.js -체크박스 선택 후 다음 버튼 누를 시 금소법 대응 화면으로 라우팅
+3. 대출 실행 - 대출 내용 확인 : lonnexecute - Loncontentcheck.js
 3. 대출 실행 - 금소법 대응 : lonexecute - FinanceCusLaw.js - 중요 사항 3가지 여부 확인문 전부 동의 해야 ars인증 활성화 되는지 
 3번 "이러한 위험에도 불구하고 본 상품에 가입하시겠습니까?" 항목만 동의해도 ars체크 활성화 되는지 관련 사항 고객과 추후 확인 필요
 3. 대출 실행 - ARS 인증 : lonexecute - ArsCertificate.js
