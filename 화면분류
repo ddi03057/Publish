@@ -25,6 +25,6 @@
 3번 "이러한 위험에도 불구하고 본 상품에 가입하시겠습니까?" 항목만 동의해도 ars체크 활성화 되는지 관련 사항 고객과 추후 확인 필요
 3. 대출 실행 - ARS 인증 : lonexecute - ArsCertificate.js
 3. 대출 실행 - 공동인증서 인증 : lonexecute - X
-3. 대출 실행 - 대출 실행 완료 : lonexecute - Result.js - 확인 버튼 누를 시 "메인 -진행 상태"화면으로 라우팅
+3. 대출 실행 - 대출 실행 완료 : lonexecute - Result.js 
 3. 대출 실행 - 대출 실패 : lonexecute - Result.js - 현재 주석으로 처리 된 상태
 AgrmInput.js (여신거래약정서) : 기획서에 없는 content
