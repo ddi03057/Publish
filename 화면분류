@@ -1,10 +1,10 @@
 0. 메인 - 공통 : error - ServiceError.js, SystemInsepect.js / Loading.js (BottomSheet 부분 X)
-0. 메인 - 상품 안내 : Main.js / guide - Detail.js
+0. 메인 - 상품 안내 : Main.js
 0. 메인 - 나의 대출 : Main.js / postmanagement - MyLon.js
 0. 메인 - 진행 상태 : Main.js(진행 상태 탭) , common - Progress.js
 1. 고객 등록 - 상품 안내 : guide - Detail.js
 1. 고객 등록 - 사전 준비 안내 : guide - Ready.js
-2. 사전 심사 - 정보조회 약관 동의 : prejudge - Custagree.js
+2. 사전 심사 - 정보조회 약관 동의 : prejudge - Custagree.js - 모두 동의하고 다음눌럿을시 다음 페이지 라우팅
 2. 사전 심사 - 적합성, 적정성 고객정보 확인 : prejudge - Suittest.js
 2. 사전 심사 - 적합성, 적정성 고객정보 결과 : prejudge - SuitResult.js
 2. 사전 심사 - (신보)자가진단 : prejudge - SelfCheck.js
@@ -23,5 +23,5 @@
 3. 대출 실행 - ARS 인증 : lonexecute - ArsCertificate.js
 3. 대출 실행 - 공동인증서 인증 : lonexecute - X
 3. 대출 실행 - 대출 실행 완료 : lonexecute - Result.js
-3. 대출 실행 - 대출 실패 : lonexecute - X
+3. 대출 실행 - 대출 실패 : lonexecute - Result.js
 AgrmInput.js (여신거래약정서) : 기획서에 없는 content
