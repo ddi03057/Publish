@@ -1,4 +1,4 @@
-0. 메인 - 공통 : error - ServiceError.js, SystemInsepect.js / Loading.js (BottomSheet 부분 X) - ServiceError 페이지에서 '홈으로' 눌렀을 시'상품 안내' 또는 '나의 대출' 화면으로 라우팅 필요 / 
+0. 메인 - 공통 : error - ServiceError.js, SystemInsepect.js / Loading.js (BottomSheet 부분 X) - ServiceError 페이지에서 '홈으로' 눌렀을 시'상품 안내' 또는 '나의 대출' 화면으로 라우팅 필요
 0. 메인 - 상품 안내 : Main.js - 진행 상태에서 신규 상태 존재 시 붉은 색 점 표시(확인 후에는 소멸)
 0. 메인 - 나의 대출 : Main.js / postmanagement - MyLon.js - 대출 계좌 선택 시 계좌 기본 정보 및 거래내역 화면으로 이동(해당 description에 대한 구체적인 내용 검증 필요)
 0. 메인 - 진행 상태 : Main.js(진행 상태 탭) , common - Progress.js - 보증 심사 완료 시 보증서 내용 확인 화면으로 라우팅 버튼 필요
