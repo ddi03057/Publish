@@ -1,20 +1,20 @@
-0. 메인 - 공통 : error - ServiceError.js, SystemInsepect.js / Loading.js (BottomSheet 부분 X) - ServiceError 페이지에서 홈으로 눌렀을 시'상품 안내' 또는 '나의 대출' 화면으로 라우팅 필요
+0. 메인 - 공통 : error - ServiceError.js, SystemInsepect.js / Loading.js (BottomSheet 부분 X) - ServiceError 페이지에서 '홈으로' 눌렀을 시'상품 안내' 또는 '나의 대출' 화면으로 라우팅 필요 / 
 0. 메인 - 상품 안내 : Main.js - 진행 상태에서 신규 상태 존재 시 붉은 색 점 표시(확인 후에는 소멸)
 0. 메인 - 나의 대출 : Main.js / postmanagement - MyLon.js - 대출 계좌 선택 시 계좌 기본 정보 및 거래내역 화면으로 이동(해당 description에 대한 구체적인 내용 검증 필요)
 0. 메인 - 진행 상태 : Main.js(진행 상태 탭) , common - Progress.js - 보증 심사 완료 시 보증서 내용 확인 화면으로 라우팅 버튼 필요
 1. 고객 등록 - 상품 안내 : guide - Detail.js
 1. 고객 등록 - 사전 준비 안내 : guide - Ready.js
-2. 사전 심사 - 정보조회 약관 동의 : prejudge - Custagree.js - 모두 동의하고 다음눌럿을시 다음 페이지 라우팅
+2. 사전 심사 - 정보조회 약관 동의 : prejudge - Custagree.js - 3번째 항목 동의서 (PDF)필요
 2. 사전 심사 - 적합성, 적정성 고객정보 확인 : prejudge - Suittest.js - "전문금융 소비자" 선택시 alert 제공, "대출용도 - 시설자금" 선택시 대출 비대상으로 진행 불가 안내 alert 제공
 2. 사전 심사 - 적합성, 적정성 고객정보 결과 : prejudge - SuitResult.js - "SelfCheck" 화면 삭제로 인해 다음 페이지 라우팅 경로 재검토
 2. 사전 심사 - (신보)자가진단 : prejudge - SelfCheck.js => 금일 회의에서 해당 부분 삭제하는 것으로 결정
-2. 사전 심사 - 행정구역 주소지 입력 : prejudge - Datacollect.js
-2. 사전 심사 - 공동인증서 복사 및 등록 안내 : Prejudge - X(페이지 미개발)
+2. 사전 심사 - 행정구역 주소지 입력 : prejudge - Datacollect.js - X (페이지 미개발)
+2. 사전 심사 - 공동인증서 복사 및 등록 안내 : Prejudge - X
 2. 사전 심사 - 자료수집(공동인증서 인증) : Prejudge - X
 2. 사전 심사 - 보증심사자료 작성 : prejudge - Grtinfoinput.js - description에 따라 선택 사항 체크 시에만 진행 가능하도록 유효성 검증 필요/ 대출희망금액 중 1백만 단위 입력 시 "1백만원 단위로 입력 가능합니다." 메시지 출력
 2. 사전 심사 - 서류 전송 확인 : prejudge - DocStatus.js
-3. 대출 실행 - 대출 실행 보증 승인 내역 : Grtjudge - ApprInfo.js - 대출 실행 버튼 클릭 시 대출 약관 동의 화면으로 라우팅
-3. 대출 실행 - 대출 약관 동의 : lonexecute - untactagrm.js - 모두 동의하고 확인 버튼 누를 시 공동인증서 선택 및 인증 화면으로 라우팅
+3. 대출 실행 - 대출 실행 보증 승인 내역 : Grtjudge - ApprInfo.js - 대출 실행 버튼 클릭 시 대출 약관 동의 화면으로 라우팅 // 보증서 내역 없는 페이지 필요(현재 주석 처리)
+3. 대출 실행 - 대출 약관 동의 : lonexecute - untactagrm.js - 모두 동의하고 확인 버튼 누를 시 공동인증서 선택 및 인증 화면으로 라우팅 / 한 개 이상의 개별 약관 선택 체크한 경우 버튼명은 [동의하고 다음]으로 바뀌고 비활성화
 3. 대출 실행 - 공동인증서 선택 및 인증 : lonexecute - X
 3. 대출 실행 - 대출 신청 정보 입력 : lonexecute - Applyinfoinput.js - 모든 항목 선택 해야 '다음' 버튼 활성화 및 클릭 시 대출 내용 확인 화면으로 라우팅
 / 할부금 및 이자 납입일 직접입력 선택 시 입력창에 숫자 키패드 띄우고 1~31까지만 입력 가능
@@ -26,5 +26,6 @@
 3. 대출 실행 - ARS 인증 : lonexecute - ArsCertificate.js
 3. 대출 실행 - 공동인증서 인증 : lonexecute - X
 3. 대출 실행 - 대출 실행 완료 : lonexecute - Result.js - 확인 버튼 선택 시 진행 상태 화면으로 이동
-3. 대출 실행 - 대출 실패 : lonexecute - Result.js - 현재 주석으로 처리 된 상태
+3. 대출 실행 - 대출 실패 : lonexecute - Result.js - (현재 주석으로 처리 된 상태)
 AgrmInput.js (여신거래약정서) : 기획서에 없는 content
+4.Header : header부분 뒤로가기 클릭 시 이전페이지로 라우팅 
